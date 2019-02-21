@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.pr</groupId>
-	<artifactId>PropleBoot</artifactId>
+	<artifactId>PeopleBoot</artifactId>
 	<version>1.0</version>
 	<name>PropleBoot</name>
 	<description>Simple SpringBoot program</description>
