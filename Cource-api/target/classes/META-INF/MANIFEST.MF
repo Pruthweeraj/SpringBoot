@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
-Built-By: PR
-Build-Jdk: 10.0.2
 Implementation-Title: Cource-api-db
 Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: pruthweeraj
 Implementation-Vendor-Id: com.pr
+Build-Jdk: 1.8.0_191
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/CourceApiApp2
 Created-By: Maven Integration for Eclipse

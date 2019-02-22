@@ -1,13 +1,15 @@
-package com.pr.peopleService;
+package com.pr.PropleBoot.peopleService;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.pr.bean.People;
-import com.pr.peopleDAO.PeopleDAO;
+import com.pr.PropleBoot.bean.People;
+import com.pr.PropleBoot.peopleDAO.PeopleDAO;
 
 @Service
 public class PeopleService {
@@ -16,7 +18,7 @@ public class PeopleService {
 	private PeopleDAO peopleDAO;
 
 	public List<People> getAllPeoples() {
-		List<People> peoples = null;
+		List<People> peoples = new ArrayList<People>();
 		Iterator<People> itr = peopleDAO.findAll().iterator();
 		while (itr.hasNext()) {
 			peoples.add(itr.next());
@@ -28,12 +30,16 @@ public class PeopleService {
 		peopleDAO.save(people);
 	}
 
-	public void updatePeople(int id, People people) {
-		People p = peopleDAO.findById(id).get();
-		peopleDAO.save(p);
+	public void updatePeople(People people) {
+		
+		peopleDAO.save(people);
 	}
 
 	public void deletePeople(int id) {
 		peopleDAO.deleteById(id);
+	}
+
+	public Optional<People> getPeopleById(int id) {
+		return peopleDAO.findById(id);
 	}
 }

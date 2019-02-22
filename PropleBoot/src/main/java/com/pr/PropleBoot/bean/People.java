@@ -1,4 +1,4 @@
-package com.pr.bean;
+package com.pr.PropleBoot.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
